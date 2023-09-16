@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Dai+Banna+SIL&family=Montserrat:wght@600;900&display=swap");
+
+:root {
+  --clr-text: #06140e;
+  --clr-surface: #fbfefd;
+  --clr-primary: #6159cf;
+  --clr-secondary: #ecb1c5;
+  --clr-accent: #969d2f;
+
+  --fw-regular: 400;
+  --fw-medium: 600;
+  --fw-bold: 900;
+
+  --ff-body: "Dai Banna SIL", serif;
+  --ff-heading: "Montserrat", sans-serif;
+
+  --step--2: clamp(0.69rem, calc(0.67rem + 0.1vw), 0.75rem);
+  --step--1: clamp(0.78rem, calc(0.68rem + 0.49vw), 1.06rem);
+  --step-0: clamp(0.88rem, calc(0.66rem + 1.09vw), 1.5rem);
+  --step-1: clamp(0.98rem, calc(0.59rem + 1.98vw), 2.12rem);
+  --step-2: clamp(1.11rem, calc(0.45rem + 3.29vw), 3rem);
+  --step-3: clamp(1.25rem, calc(0.2rem + 5.21vw), 4.24rem);
+  --step-4: clamp(1.4rem, calc(-0.2rem + 7.99vw), 6rem);
+  --step-5: clamp(1.58rem, calc(-0.82rem + 12vw), 8.48rem);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clr-text: #fbfefd;
+    --clr-surface: #06140e;
+    --clr-primary: #6159cf;
+    --clr-secondary: #040102;
+    --clr-accent: #d6dc89;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2 {
+  overflow-wrap: break-word;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  background-color: var(--clr-surface);
+  color: var(--clr-text);
+  font-family: var(--ff-body);
+  font-weight: var(--fw-regular);
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  height: 100px;
+  background-color: var(--clr-primary);
+  margin-top: 0;
+  padding-left: 0;
+}
+
+ul li {
+  list-style: none;
+  color: var(--clr-accent);
+}
+
+ul li a {
+  text-decoration: none;
+  color: var(--clr-text);
+  font-size: var(--step-1);
+}
+
+.wrapper {
+  width: min(100% - 3rem, 80ch);
+  margin-inline: auto;
+  margin-bottom: 40px;
+}
+
+h1,
+h2,
+p {
+  margin: 0 0 1rem 0;
+}
+
+h1 {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-bold);
+  font-size: var(--step-3);
+}
+
+h2 {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-medium);
+  font-size: var(--step-2);
+}
+
+.index-img {
+  width: 100%;
+}
+
+.menu-img {
+  display: grid;
+  gap: min(10px, 20vw);
+
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+}
+
+p {
+  font-size: clamp(1rem, 2vw, 3rem);
+  font-size: var(--step-1);
+}
+
+/* Contact US */
+
+.form {
+  width: min(600px, 70vw);
+  margin-inline: ;
+  margin: min(20px, 10vh) auto;
+}
+
+legend {
+  margin-left: 20px;
+  border: 1px solid var(--clr-text);
+}
+
+label:where(:not([for="complaint"], [for="feedback"])) {
+  display: block;
+}
+
+input:not([type="checkbox"]) {
+  display: block;
+  width: 100%;
+}
+
+textarea {
+  display: block;
+  margin-inline: auto;
+  width: 100%;
+}
+
+button {
+  display: block;
+  margin-inline: auto;
+  background-color: var(--clr-accent);
+}
+
+/* Utility Class */
+.center {
+  text-align: center;
+}
